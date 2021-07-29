@@ -1,0 +1,34 @@
+main.mobile {
+    .header {
+        padding: 50px 10px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            &__logo {
+                max-width: 60px;
+                padding-right: 10px;
+            }
+    
+            span {
+                color:$white;
+                font-weight: bold;
+                font-size: 1.75rem;
+            }
+        }
+        &__arrowDown {
+            margin-top: 5px;
+            max-width: 10px;
+            transition: transform 0.3s;
+
+            &--active {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

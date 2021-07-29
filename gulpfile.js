@@ -17,7 +17,7 @@ function compSass() {
   }
 
 function watch() {
-    gulp.watch('src/assets/scss/app.scss', compSass);
+    gulp.watch('src/assets/scss/**/*.scss', compSass);
 
 }
 

@@ -1,0 +1,105 @@
+@import '../../utils/variaveis';
+
+main.mobile {
+    .panel {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s;
+        &__qrcode {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__img {
+                max-width: 100px;
+            }
+
+            &__agency, &__account {
+                font-weight: 300;
+                color: rgba(255,255,255,0.7);
+                margin-top: 5px;
+
+                &--number {
+                    font-weight: 700;
+                    color: $white;
+                }
+            }
+        }
+
+        &__navigation {
+            margin-top: 30px;
+            list-style: none;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            &__link {
+                min-height: 35px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                a {
+                    width: 100%;
+                    min-height: 35px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &:first-child {
+                    border-top: 1px solid rgba(255,255,255,0.3);
+                }
+
+                &:last-child {
+                    border-bottom: 1px solid rgba(255,255,255,0.3);
+                }
+
+                & + .panel__navigation__link {
+                    border-top: 1px solid rgba(255,255,255,0.3);
+                }
+
+                &__icon {
+                    width: 100%;
+                    max-width: 20px;
+                    max-height: 25px;
+                    margin-right: 16px;
+                }
+
+                &__arrow {
+                    transform: rotate(-90deg);
+                    max-width: 16px;
+                }
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    &__description {
+                        font-size: 0.8rem;
+                        font-weight: 100;
+                        color: rgba(255,255,255,0.7);
+                    }
+                }
+            }
+        }
+
+        &__logout {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        &--active {
+            height: 100%;
+        }
+    }
+}
