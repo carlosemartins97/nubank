@@ -14,6 +14,7 @@ main.mobile {
     overflow-x: hidden;
     color: $white;
     z-index: 2;
+    position: relative;
 
     div.content {
         transition: all 0.5s;
@@ -21,6 +22,10 @@ main.mobile {
 
         &--active {
             transform: translateX(0) !important;
+        }
+
+        &--hidden {
+            display: none;
         }
     }
 

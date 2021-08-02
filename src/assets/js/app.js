@@ -1,3 +1,4 @@
+const mobile = document.querySelector('.mobile');
 const header = document.querySelector('.header');
 const panel = document.querySelector('.panel');
 const headerArrow = document.querySelector('.header__arrowDown');
@@ -68,10 +69,14 @@ function handleLogout() {
 
 shortcutButton.addEventListener('click', function() {
     handleOpenShortcuts();
+
 })
 
 function handleOpenShortcuts() {
+    mobile.scrollIntoView();
     organizeShortcut.classList.remove('atalhos--disabled');
+    content.classList.remove('content--active');
+    content.classList.add('content--hidden');
 }
 
 shortcutBackButton.addEventListener('click', function() {
@@ -79,5 +84,7 @@ shortcutBackButton.addEventListener('click', function() {
 })
 
 function handleCloseShortcuts() {
+    content.classList.remove('content--hidden');
     organizeShortcut.classList.add('atalhos--disabled');
+    content.classList.add('content--active');
 }
