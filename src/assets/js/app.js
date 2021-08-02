@@ -1,5 +1,8 @@
 const mobile = document.querySelector('.mobile');
+
 const header = document.querySelector('.header');
+const footer = document.querySelector('footer');
+
 const panel = document.querySelector('.panel');
 const headerArrow = document.querySelector('.header__arrowDown');
 const splashLogo = document.querySelector('.splashLogo');
@@ -9,6 +12,15 @@ const organizeShortcut = document.querySelector('.atalhos');
 const shortcutButton = document.querySelector('.shortcuts');
 const shortcutBackButton = document.querySelector('.atalhos__wrapper__title__back');
 
+const rewards = document.querySelector('.cardPanel__wrapper__rewards');
+const rewardsSection = document.querySelector('.rewards');
+const rewardsBack = document.querySelector('.rewards__header__back');
+
+
+const account = document.querySelector('.cardPanel__wrapper__account');
+const credit = document.querySelector('.cardPanel__wrapper__credit');
+
+
 
 
 //slider cards
@@ -16,6 +28,7 @@ $(document).ready(function() {
     $('.cardPanel').slick({
         dots: true,
         arrows: false,
+        infinite: false,
     });
     $('.footer__wrapper').slick({
         dots: false,
@@ -88,3 +101,28 @@ function handleCloseShortcuts() {
     organizeShortcut.classList.add('atalhos--disabled');
     content.classList.add('content--active');
 }
+
+// function onDragStart(event) {
+//     event.dataTransfer.setData("text", event.target.id);
+//     event.target.style.color = 'green';
+// }
+
+// function onDragOver(event) {
+//     event.preventDefault();
+// }
+
+// function onDrop(event) {
+//     event.preventDefault();
+//     var data = event.dataTransfer.getData("text");
+//     event.target.appendChild(document.getElementById(data));
+//     document.getElementById("drag").style.color = 'black';
+// }
+
+rewards.addEventListener('click', function() {
+    rewardsSection.classList.remove('rewards--disabled')
+})
+
+rewardsBack.addEventListener('click', function() {
+    rewardsSection.classList.add('rewards--disabled')
+})
+

@@ -4,6 +4,9 @@ main.mobile {
     .footer {
         padding-left: 20px;
         padding-bottom: 20px;
+        &--disabled {
+            display: none;
+        }
         &__wrapper {
             &__card {
                 background: rgba(255,255,255,0.1);
