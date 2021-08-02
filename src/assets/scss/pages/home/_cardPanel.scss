@@ -1,0 +1,174 @@
+@import '../../utils/variaveis';
+
+main.mobile {
+    .cardPanel {
+        &__wrapper {
+            background: $white;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 20px;
+
+            &__iconContainer {
+                padding: 30px 30px 0 30px;
+                width: 100%;
+                &__mainIcon {
+                    max-width: 25px;
+                }
+            }
+
+            &__mainInfo {
+                color: $black;
+                padding: 0 30px 30px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &__subtitle {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    &--salmon {
+                        color: $salmon;
+                    }
+                }
+
+                &__title {
+                    font-size: 2rem;
+                    color: $mainColor;
+                    font-weight: 900;
+                    letter-spacing: 0.1em;
+                    span {
+                        font-weight: 400;
+                    }
+
+                    &--salmon {
+                        color: $salmon;
+                    }
+
+                    &--black {
+                        color: $black;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &::after {
+                            content: '';
+                            background: url('../img/icons/gray/eye.png') no-repeat;
+                            background-size: 25px;
+                            background-position: center;
+                            position: absolute;
+                            right: 0;
+                            width: 25px;
+                            height: 25px;
+                        };
+                    }
+                }
+
+                &__description {
+                    letter-spacing: 0.05em;
+                    margin-top: 5px;
+                    
+                    span {
+                        font-weight: bold;
+                        color: $mainColor;
+                    }
+
+                    &--column {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    &--grey {
+                        text-transform: uppercase;
+                        color: #ccc !important;
+                        margin-bottom: 10px;
+                    }
+
+                    &--link {
+                        
+                        max-width: 140px;
+                        padding: 10px;
+                        border: 1px solid $salmon;
+                        color: $salmon;
+                        text-align: center;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 0.75rem;
+                    }
+                }
+
+                &__bars {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-bottom: 5px;
+
+                    >:nth-child(n) {
+                        width: 2px;
+                        min-height: 30px;
+                        background: #ccc;
+                        margin-right: 10px;
+                    }
+
+                    &__bar1, &__bar2, &__bar3, &__bar4, &__bar5 {
+                        background: $mainColor !important;
+                    }
+                    &__bar6, &__bar7 {
+                        height: 44px;
+                    }
+                    
+                    &__bar8, &__bar9, &__bar10 {
+                        height: 46px;
+                    }
+                    &__bar2 {
+                        height: 32px;
+                    }
+                    &__bar3 {
+                        height: 34px;
+                    }
+                    &__bar4 {
+                        height: 36px;
+                    }
+                    &__bar5 {
+                        height: 38px;
+                    }
+                }
+            }
+            &__footer {
+                background: #eee;
+                padding: 30px; 
+                display: flex;
+                align-items: center;
+                max-height: 70px;
+                color: $black;
+                position: relative;
+                &__icon {
+                    max-width: 25px;
+                    max-height: 25px;
+                    margin-right: 10px;
+                }
+
+                &__arrow {
+                    position: absolute;
+                    right: 10px;
+                    transform: rotate(-90deg);
+                    width: 10px;
+                }
+            }
+        }
+        .slick-dots {
+            position: initial;
+            margin-top: 15px;
+            li {
+                width: 15px;
+                height: 15px;
+                margin: 0 !important;
+                button::before {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

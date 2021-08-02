@@ -1,0 +1,65 @@
+@import '../../utils/variaveis';
+
+main.mobile {
+    .atalhos {
+        background: #eee;
+        padding: 0 5px;
+        height: 98%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transition: all 0.3s;
+        &--disabled {
+            top: unset;
+            bottom: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        &__wrapper {
+            background: white;
+            height: 100%;
+            &__title {
+                color: black;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 1rem;
+                padding: 20px 0;
+                position: relative;
+
+                &__back {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    position: absolute;
+                    left: 0px;
+                    padding: 0 20px;
+                    img {
+                        transform: rotate(90deg);
+                        max-width: 15px;
+                    }
+                }
+            }
+    
+            &__list {
+                list-style: none;
+    
+                >:first-child {
+                    border-top: 1px solid #eee;
+                }
+    
+                >:last-child {
+                    border-bottom: none;
+                }
+    
+                &__item {
+                    color: black;
+                    border-bottom: 1px solid #eee;
+                    padding: 20px;
+    
+                }
+            }
+        }
+    }
+}

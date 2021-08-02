@@ -1,0 +1,27 @@
+@import '../../utils/variaveis';
+
+main.mobile {
+    .footer {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        &__wrapper {
+            &__card {
+                background: rgba(255,255,255,0.1);
+                max-width: 90px;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 10px;
+                margin-right: 10px;
+
+                &__imgWrapper {
+                    &__img {
+                        max-width: 25px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
