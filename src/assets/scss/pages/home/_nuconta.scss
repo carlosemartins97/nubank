@@ -1,0 +1,123 @@
+@import '../../utils/variaveis';
+@import '../../utils/mixins';
+
+main.mobile {
+    .nuconta {
+        @include nuSection;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 999;
+            img {
+                max-width: 25px;
+                max-height: 25px;
+            }
+
+            &__back {
+                display: flex;
+                align-items: center;
+                &__arrow {
+                    transform: rotate(90deg);
+                    margin-right: 5px;
+                }
+                
+            }
+        }
+
+        &__slider {
+            &__slide {
+                color: $black;
+                &__header {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &__title {
+                        font-weight: 400;
+                        font-size: 2rem;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                    &__description {
+                        text-align: center;
+                        letter-spacing: 0.05em;
+
+                        &--gray {
+                            font-weight: bold;
+                            color: #ccc;
+                        }
+                    }
+                }
+
+                &__body {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 300px;
+                        object-fit: contain;
+                        margin-top: 20px;
+                    }
+
+                    &__description {
+                        width: 100%;
+                        text-align: end;
+                        padding: 0 90px;
+                        color: #777;
+                        &--gray {
+                            font-weight: bold;
+                            display: block;
+                            color: #777;
+                        }
+                    }
+                }
+
+                &__footer {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 30px;
+                    &__acao {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            max-width: 25px;
+                            max-height: 20px;
+                            height: 100%;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                @include list;
+                &__list {
+                    margin-top: 13px;
+                }
+            }
+            .slick-dots {
+                bottom: unset;
+                top: -30px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 999;
+                width: auto;
+
+                li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}

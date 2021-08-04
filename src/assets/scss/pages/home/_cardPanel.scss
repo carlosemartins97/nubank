@@ -54,18 +54,15 @@ main.mobile {
                         position: relative;
                         display: flex;
                         align-items: center;
-                        &::after {
-                            content: '';
-                            background: url('../img/icons/gray/eye.png') no-repeat;
-                            background-size: 25px;
-                            background-position: center;
-                            position: absolute;
-                            right: 0;
-                            width: 25px;
-                            height: 25px;
-                        };
                     }
+
                 }
+                &__showValue {
+                    max-width: 25px;
+                    position: absolute;
+                    right: 40px;
+                    width: 25px;
+                };
 
                 &__description {
                     letter-spacing: 0.05em;
@@ -155,6 +152,41 @@ main.mobile {
                     right: 10px;
                     transform: rotate(-90deg);
                     width: 10px;
+                }
+            }
+
+            &__credit {
+                position: relative;
+                
+                &__scroll {
+
+                    &--yellow, &--red, &--green {
+                        position: absolute;
+                        right: 20px;
+                        width: 10px;
+                    }
+                    
+                    &--yellow {
+                        height: 10%;
+                        background: #FAA203;
+                        top: 10%;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                    }
+
+                    &--red {
+                        height: 30%;
+                        background: #C95A57;
+                        top:20%;
+                    }
+
+                    &--green {
+                        height: 30%;
+                        background: #93CB2B;
+                        top:40%;
+                        border-bottom-left-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                    }
                 }
             }
         }

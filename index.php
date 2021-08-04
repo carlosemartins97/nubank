@@ -91,7 +91,12 @@
 
 
 
-                <div class="cardPanel__wrapper cardPanel__wrapper__account">
+                <div class="cardPanel__wrapper cardPanel__wrapper__credit">
+                    <div class="cardPanel__wrapper__credit__scroll">
+                        <div class="cardPanel__wrapper__credit__scroll--yellow"></div>
+                        <div class="cardPanel__wrapper__credit__scroll--red"></div>
+                        <div class="cardPanel__wrapper__credit__scroll--green"></div>
+                    </div>
                     <figure class="cardPanel__wrapper__iconContainer">
                         <img class="cardPanel__wrapper__iconContainer__mainIcon" src="dist/img/icons/gray/card.png" alt="Card">
                     </figure>
@@ -112,7 +117,7 @@
 
 
 
-                <div class="cardPanel__wrapper cardPanel__wrapper__credit">
+                <div class="cardPanel__wrapper cardPanel__wrapper__account">
                     <figure class="cardPanel__wrapper__iconContainer">
                         <img class="cardPanel__wrapper__iconContainer__mainIcon" src="dist/img/icons/gray/coin.png" alt="Coin">
                     </figure>
@@ -130,6 +135,7 @@
                             <div class="cardPanel__wrapper__mainInfo__bars__bar10"></div>
                         </div>
                         <h2 class="cardPanel__wrapper__mainInfo__title cardPanel__wrapper__mainInfo__title--black"><span>R$</span>1.856<span>,68</span></h2>
+                        <img class="cardPanel__wrapper__mainInfo__showValue" src="dist/img/icons/gray/eye.png" alt="eye icon">
                         <p class="cardPanel__wrapper__mainInfo__description">Você já ganhou <span class="cardPanel__wrapper__mainInfo__description--grey">R$ 1,37</span> neste mês.</p>
                     </div>
                     <div class="cardPanel__wrapper__footer">
@@ -169,114 +175,13 @@
             <img src="dist/img/logo-splash.png" alt="Nubank's splash logo">
         </figure>
 
-        <section class="atalhos atalhos--disabled">
-            <div class="atalhos__wrapper">
-                <h1 class="atalhos__wrapper__title">
-                    <button class="atalhos__wrapper__title__back"><img  src="dist/img/icons/arrow-down.png" alt="Arrow down"></button>
-                    Organizar atalhos
-                </h1>
-                <ul 
-                    class="atalhos__wrapper__list"
-                    ondragover="onDragOver(event)"
-                    ondrop="onDrop(event)"
-                >
-                    <?php foreach($footer_links as $link) { ?>
-                    <li 
-                        class="atalhos__wrapper__list__item"
-                        draggable="true"
-                        ondragstart="onDragStart(event)"
-                    >
-                        <?= $link['title'] != 'Organizar atalhos' ? $link['title'] : '' ?>
-                    </li>
-                    <?php } ?>
-                </ul>
-            </div>
-        </section>
+        
 
-        <section class="rewards rewards--disabled">
-            <div class="rewards__header">
-                <div class="rewards__header__back">
-                    <img class="rewards__header__back__arrow" src="dist/img/icons/arrow-down.png" alt="left arrow">
-                    <img src="dist/img/icons/gray/gift.png" alt="gift icon">
-                </div>
-                <img src="dist/img/icons/gray/question.png" alt="question icon">
-            </div>
-
-            <div class="rewards__title">
-                <h2>rewards</h2>
-                <p>28.496<span>pts</span></p>
-            </div>
-
-            <div class="rewards__categories">
-                <div class="rewards__categories__hotel">
-                    <img src="dist/img/icons/gray/car.png" alt="Car">
-                    <h3>Voos e hotéis</h3>
-                    <span>Seus pontos valem mais</span>
-                </div>
-                <div class="rewards__categories__extra">
-                    <img src="dist/img/icons/gray/cart.png" alt="Cart">
-                    <h3>Extras</h3>
-                    <span>Recompensas rápidas</span>
-                </div>
-            </div>
-
-            <ul class="rewards__list">
-                <li class="rewards__list__item">
-                    <figure class="rewards__list__item__imgWrapper">
-                        <img src="dist/img/icons/gray/travel.png" alt="Handbag icon">
-                    </figure>
-                    <div class="rewards__list__item__info">
-                        <h3>Viagem</h3>
-                        <span class="rewards__list__item__info__title">Brasil Airlines</span>
-                        <span class="rewards__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
-                    </div>
-                    <div class="rewards__list__item__date">
-                        <span>Domingo</span>
-                    </div>
-                </li>
-                <li class="rewards__list__item">
-                    <figure class="rewards__list__item__imgWrapper">
-                        <img src="dist/img/icons/gray/travel.png" alt="Handbag icon">
-                    </figure>
-                    <div class="rewards__list__item__info">
-                        <h3>Viagem</h3>
-                        <span class="rewards__list__item__info__title">Brasil Airlines</span>
-                        <span class="rewards__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
-                    </div>
-                    <div class="rewards__list__item__date">
-                        <span>Domingo</span>
-                    </div>
-                </li>
-                <li class="rewards__list__item">
-                    <figure class="rewards__list__item__imgWrapper">
-                        <img src="dist/img/icons/gray/travel.png" alt="Handbag icon">
-                    </figure>
-                    <div class="rewards__list__item__info">
-                        <h3>Viagem</h3>
-                        <span class="rewards__list__item__info__title">Brasil Airlines</span>
-                        <span class="rewards__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
-                    </div>
-                    <div class="rewards__list__item__date">
-                        <span>Domingo</span>
-                    </div>
-                </li>
-                <li class="rewards__list__item">
-                    <figure class="rewards__list__item__imgWrapper">
-                        <img src="dist/img/icons/gray/travel.png" alt="Handbag icon">
-                    </figure>
-                    <div class="rewards__list__item__info">
-                        <h3>Viagem</h3>
-                        <span class="rewards__list__item__info__title">Brasil Airlines</span>
-                        <span class="rewards__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
-                    </div>
-                    <div class="rewards__list__item__date">
-                        <span>Domingo</span>
-                    </div>
-                </li>
-            </ul>
-
-
-        </section>
+        <?php 
+            @include_once('src/assets/views/includes/atalhos.php');
+            @include_once('src/assets/views/includes/rewards.php'); 
+            @include_once('src/assets/views/includes/nuConta.php');
+        ?>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

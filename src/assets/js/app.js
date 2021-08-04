@@ -18,6 +18,12 @@ const rewardsBack = document.querySelector('.rewards__header__back');
 
 
 const account = document.querySelector('.cardPanel__wrapper__account');
+const accountSection = document.querySelector('.nuconta');
+const accountBack = document.querySelector('.nuconta__header__back');
+const accountShowValue = document.querySelector('.cardPanel__wrapper__mainInfo__showValue');
+const accountTitle = document.querySelector('.cardPanel__wrapper__mainInfo__title--black');
+
+
 const credit = document.querySelector('.cardPanel__wrapper__credit');
 
 
@@ -36,6 +42,21 @@ $(document).ready(function() {
         infinite: false,
         slidesToScroll: 1,
     })
+    $('.nuconta__slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+    })
+
+    $('.nuconta__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide);
+        const questionOrSearch = document.querySelector('.nuconta__header__questionOrSearch');
+        if(nextSlide === 1) {
+            questionOrSearch.src = 'dist/img/icons/gray/search.png'
+        } else {
+            questionOrSearch.src = 'dist/img/icons/gray/question.png'
+        }
+      });
 })
 
 
@@ -121,8 +142,15 @@ function handleCloseShortcuts() {
 rewards.addEventListener('click', function() {
     rewardsSection.classList.remove('rewards--disabled')
 })
-
 rewardsBack.addEventListener('click', function() {
     rewardsSection.classList.add('rewards--disabled')
 })
+
+account.addEventListener('click', function() {
+    accountSection.classList.remove('nuconta--disabled');
+})
+accountBack.addEventListener('click', function() {
+    accountSection.classList.add('nuconta--disabled')
+})
+
 
