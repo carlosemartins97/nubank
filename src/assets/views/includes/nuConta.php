@@ -1,5 +1,6 @@
-<section class="nuconta nuconta--disabled">
+<section class="nuconta">
     <div class="nuconta__header">
+        <input type="text" name="nuconta__search" class="nuconta__search">
         <div class="nuconta__header__back">
             <img class="nuconta__header__back__arrow" src="dist/img/icons/arrow-down.png" alt="left arrow">
             <img src="dist/img/icons/gray/coin.png" alt="gift icon">
@@ -71,7 +72,7 @@
                     </figure>
                     <div class="nuconta__slider__slide__list__item__info">
                         <h3>Viagem</h3>
-                        <span class="nuconta__slider__slide__list__item__info__title">Brasil Airlines</span>
+                        <span class="nuconta__slider__slide__list__item__info__title">Gol</span>
                         <span class="nuconta__slider__slide__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
                     </div>
                     <div class="nuconta__slider__slide__list__item__date">
@@ -84,7 +85,7 @@
                     </figure>
                     <div class="nuconta__slider__slide__list__item__info">
                         <h3>Viagem</h3>
-                        <span class="nuconta__slider__slide__list__item__info__title">Brasil Airlines</span>
+                        <span class="nuconta__slider__slide__list__item__info__title">TAM</span>
                         <span class="nuconta__slider__slide__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
                     </div>
                     <div class="nuconta__slider__slide__list__item__date">
@@ -97,7 +98,7 @@
                     </figure>
                     <div class="nuconta__slider__slide__list__item__info">
                         <h3>Viagem</h3>
-                        <span class="nuconta__slider__slide__list__item__info__title">Brasil Airlines</span>
+                        <span class="nuconta__slider__slide__list__item__info__title">MSC</span>
                         <span class="nuconta__slider__slide__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
                     </div>
                     <div class="nuconta__slider__slide__list__item__date">

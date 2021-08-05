@@ -51,12 +51,34 @@ $(document).ready(function() {
     })
 
     $('.nuconta__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        console.log(nextSlide);
         const questionOrSearch = document.querySelector('.nuconta__header__questionOrSearch');
         if(nextSlide === 1) {
             questionOrSearch.src = 'dist/img/icons/gray/search.png'
+            const nucontaSearch = document.querySelector('.nuconta__search');
+            const nucontaListItems = document.querySelectorAll('.nuconta__slider__slide__list__item');
+            questionOrSearch.addEventListener('click', function() {
+                nucontaSearch.classList.add('nuconta__search--active');
+                nucontaSearch.focus();
+            })
+            nucontaSearch.onkeyup = function() {
+                var search = nucontaSearch.value;
+                for(let i = 0; i < nucontaListItems.length; i++) {
+                    let item = nucontaListItems[i].innerText;
+                    let corresponde = item.toLowerCase().indexOf(search) >= 0;
+                    nucontaListItems[i].style.display = corresponde ? '' : 'none';
+                }
+            }
+            
+
         } else {
             questionOrSearch.src = 'dist/img/icons/gray/question.png'
+            const nucontaSearch = document.querySelector('.nuconta__search');
+            const nucontaListItems = document.querySelectorAll('.nuconta__slider__slide__list__item');
+
+            nucontaSearch.classList.remove('nuconta__search--active');
+            for(let i = 0; i < nucontaListItems.length; i++) {
+                nucontaListItems[i].style.display = 'flex';
+            }
         }
     });
 

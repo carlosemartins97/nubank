@@ -1,4 +1,4 @@
-<section class="nucredito">
+<section class="nucredito nucredito--disabled">
     <header class="nucredito__header">
         <div class="nucredito__header__back">
             <img class="nucredito__header__back__arrow" src="dist/img/icons/arrow-down.png" alt="left arrow">
