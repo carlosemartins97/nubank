@@ -1,10 +1,11 @@
 <section class="nucredito nucredito--disabled">
     <header class="nucredito__header">
+        <input type="text" name="nucredito__search" class="nucredito__search">
         <div class="nucredito__header__back">
             <img class="nucredito__header__back__arrow" src="dist/img/icons/arrow-down.png" alt="left arrow">
             <img src="dist/img/icons/gray/coin.png" alt="gift icon">
         </div>
-        <img src="dist/img/icons/gray/search.png" alt="question icon">
+        <img class="nucredito__header__search" src="dist/img/icons/gray/search.png" alt="search icon">
     </header>
 
     <div class="nucredito__slider">
@@ -26,7 +27,7 @@
             </figure>
             <div class="nucredito__list__item__info">
                 <h3>Viagem</h3>
-                <span class="nucredito__list__item__info__title">Brasil Airlines</span>
+                <span class="nucredito__list__item__info__title">Futebol</span>
                 <span class="nucredito__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
             </div>
             <div class="nucredito__list__item__date">
@@ -52,7 +53,7 @@
             </figure>
             <div class="nucredito__list__item__info">
                 <h3>Viagem</h3>
-                <span class="nucredito__list__item__info__title">Brasil Airlines</span>
+                <span class="nucredito__list__item__info__title">GOL</span>
                 <span class="nucredito__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
             </div>
             <div class="nucredito__list__item__date">
@@ -65,7 +66,7 @@
             </figure>
             <div class="nucredito__list__item__info">
                 <h3>Viagem</h3>
-                <span class="nucredito__list__item__info__title">Brasil Airlines</span>
+                <span class="nucredito__list__item__info__title">TAM</span>
                 <span class="nucredito__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
             </div>
             <div class="nucredito__list__item__date">
@@ -78,7 +79,7 @@
             </figure>
             <div class="nucredito__list__item__info">
                 <h3>Viagem</h3>
-                <span class="nucredito__list__item__info__title">Brasil Airlines</span>
+                <span class="nucredito__list__item__info__title">Teste</span>
                 <span class="nucredito__list__item__info__description" >Apagar R$ 268,35 com 26.836pts</span>
             </div>
             <div class="nucredito__list__item__date">

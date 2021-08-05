@@ -1,5 +1,4 @@
 const mobile = document.querySelector('.mobile');
-
 const header = document.querySelector('.header');
 const footer = document.querySelector('footer');
 
@@ -27,6 +26,10 @@ const accountTitle = document.querySelector('.cardPanel__wrapper__mainInfo__titl
 const credit = document.querySelector('.cardPanel__wrapper__credit');
 const creditSection = document.querySelector('.nucredito');
 const creditBack = document.querySelector('.nucredito__header__back');
+const creditSearch = document.querySelector('.nucredito__header__search');
+const creditSearchInput = document.querySelector('.nucredito__search');
+const nucreditListItems = document.querySelectorAll('.nucredito__list__item');
+
 
 
 
@@ -190,4 +193,20 @@ credit.addEventListener('click', function() {
 creditBack.addEventListener('click', function() {
     creditSection.classList.add('nucredito--disabled');
 })
+
+
+
+creditSearch.addEventListener('click', function() {
+    creditSearchInput.classList.toggle('nucredito__search--active');
+    creditSearchInput.focus();
+})
+
+creditSearchInput.onkeyup = function() {
+    var search = creditSearchInput.value;
+    for(let i = 0; i < nucreditListItems.length; i++) {
+        let item = nucreditListItems[i].innerText;
+        let corresponde = item.toLowerCase().indexOf(search) >= 0;
+        nucreditListItems[i].style.display = corresponde ? '' : 'none';
+    }
+}
 

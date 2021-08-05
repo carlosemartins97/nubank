@@ -12,6 +12,7 @@ main.mobile {
             display: flex;
             justify-content: space-between;
             padding: 20px;
+            position: relative;
             img {
                 max-width: 25px;
                 object-fit: contain;
@@ -22,6 +23,25 @@ main.mobile {
                 &__arrow {
                     transform: rotate(90deg);
                     margin-right: 10px;
+                }
+            }
+
+            .nucredito__search {
+                position: absolute;
+                width: 80%;
+                left: 20px;
+                height: 35px;
+                background: #eee;
+                z-index: 999;
+                border: none;
+                outline: none;
+                border-radius: 4px;
+                padding: 5px;
+                top: -50px;
+                transition: all 0.1s;
+
+                &--active {
+                    top: 18px; 
                 }
             }
         }

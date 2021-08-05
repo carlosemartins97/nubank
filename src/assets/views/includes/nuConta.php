@@ -1,4 +1,4 @@
-<section class="nuconta">
+<section class="nuconta nuconta--disabled">
     <div class="nuconta__header">
         <input type="text" name="nuconta__search" class="nuconta__search">
         <div class="nuconta__header__back">
