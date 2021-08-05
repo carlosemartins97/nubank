@@ -25,6 +25,8 @@ const accountTitle = document.querySelector('.cardPanel__wrapper__mainInfo__titl
 
 
 const credit = document.querySelector('.cardPanel__wrapper__credit');
+const creditSection = document.querySelector('.nucredito');
+const creditBack = document.querySelector('.nucredito__header__back');
 
 
 
@@ -56,7 +58,13 @@ $(document).ready(function() {
         } else {
             questionOrSearch.src = 'dist/img/icons/gray/question.png'
         }
-      });
+    });
+
+    $('.nucredito__slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+    })
 })
 
 
@@ -153,4 +161,11 @@ accountBack.addEventListener('click', function() {
     accountSection.classList.add('nuconta--disabled')
 })
 
+credit.addEventListener('click', function() {
+    creditSection.classList.remove('nucredito--disabled');
+})
+
+creditBack.addEventListener('click', function() {
+    creditSection.classList.add('nucredito--disabled');
+})
 

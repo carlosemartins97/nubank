@@ -19,7 +19,13 @@
 @mixin list {
     &__list {
         background: #f5f5f5;
-        overflow: hidden;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        
         &__item {
             color: black;
             display: flex;

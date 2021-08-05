@@ -2,6 +2,7 @@
 @import '../../utils/mixins';
 main.mobile {
     .rewards {
+        overflow: hidden;
         background: white;
         height: 98%;
         position: absolute;

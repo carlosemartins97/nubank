@@ -1,0 +1,111 @@
+@import '../../utils/variaveis';
+@import '../../utils/mixins';
+
+main.mobile {
+    .nucredito {
+        padding-right: 10px;
+        position: relative;
+        overflow: hidden;
+        @include nuSection;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            img {
+                max-width: 25px;
+                object-fit: contain;
+            }
+            &__back {
+                display: flex;
+                align-items: center;
+                &__arrow {
+                    transform: rotate(90deg);
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &__slider {
+            &__slide {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &__title {
+                    font-weight: 400;
+                    font-size: 2rem;
+                    color: $salmon;
+                    letter-spacing: 0.05em;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                &__vencimento {
+                    text-transform: uppercase;
+                    color: #bbb;
+                    font-weight: 600;
+                    margin-top: 5px;
+                }
+
+                &__pagar {
+                    margin-top: 10px;
+                    max-width: 140px;
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid $salmon;
+                    color: $salmon;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -40px;
+            li {
+                margin: 0;
+            }
+        }
+
+        @include list;
+        &__list {
+            margin-top: 50px;
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &__scroll {
+            &--yellow, &--red, &--green {
+                position: absolute;
+                right: 0px;
+                width: 10px;
+            }
+            
+            &--yellow {
+                height: 20%;
+                background: #FAA203;
+                top: 0%;
+            }
+
+            &--red {
+                height: 30%;
+                background: #C95A57;
+                top:20%;
+            }
+
+            &--green {
+                height: 60%;
+                background: #93CB2B;
+                top:40%;
+            }
+        }
+    }
+}
