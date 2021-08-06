@@ -6,18 +6,7 @@
         </h1>
         <ul 
             class="atalhos__wrapper__list"
-            ondragover="onDragOver(event)"
-            ondrop="onDrop(event)"
         >
-            <?php foreach($footer_links as $link) { ?>
-            <li 
-                class="atalhos__wrapper__list__item"
-                draggable="true"
-                ondragstart="onDragStart(event)"
-            >
-                <?= $link['title'] != 'Organizar atalhos' ? $link['title'] : '' ?>
-            </li>
-            <?php } ?>
         </ul>
     </div>
 </section>

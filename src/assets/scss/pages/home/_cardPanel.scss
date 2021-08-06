@@ -61,7 +61,9 @@ main.mobile {
                     max-width: 25px;
                     position: absolute;
                     right: 40px;
+                    top: 50%;
                     width: 25px;
+                    transform: translate(-50%, -50%);
                 };
 
                 &__description {
@@ -200,6 +202,21 @@ main.mobile {
                 button::before {
                     color: $white;
                 }
+            }
+        }
+    }
+}
+
+.nuaccount {
+    .nuaccount-title, .nuaccount-description {
+        max-width: 80%;
+        transition: all 0.3s;
+
+        &.active {
+            background: #aaa;
+            color: #aaa;
+            span {
+                color: #aaa !important;
             }
         }
     }

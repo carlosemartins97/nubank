@@ -55,8 +55,16 @@ main.mobile {
     
                 &__item {
                     color: black;
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid #ddd;
+                    background: #eee;
                     padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: move;
+
+                    img {
+                        max-width: 25px;
+                    }
     
                 }
             }

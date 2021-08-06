@@ -89,8 +89,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="cardPanel__wrapper cardPanel__wrapper__credit">
                     <div class="cardPanel__wrapper__credit__scroll">
                         <div class="cardPanel__wrapper__credit__scroll--yellow"></div>
@@ -115,13 +113,11 @@
                     </div>
                 </div>
 
-
-
                 <div class="cardPanel__wrapper cardPanel__wrapper__account">
                     <figure class="cardPanel__wrapper__iconContainer">
                         <img class="cardPanel__wrapper__iconContainer__mainIcon" src="dist/img/icons/gray/coin.png" alt="Coin">
                     </figure>
-                    <div class="cardPanel__wrapper__mainInfo">
+                    <div class="cardPanel__wrapper__mainInfo nuaccount">
                         <div class="cardPanel__wrapper__mainInfo__bars">
                             <div class="cardPanel__wrapper__mainInfo__bars__bar1"></div>
                             <div class="cardPanel__wrapper__mainInfo__bars__bar2"></div>
@@ -134,39 +130,23 @@
                             <div class="cardPanel__wrapper__mainInfo__bars__bar9"></div>
                             <div class="cardPanel__wrapper__mainInfo__bars__bar10"></div>
                         </div>
-                        <h2 class="cardPanel__wrapper__mainInfo__title cardPanel__wrapper__mainInfo__title--black"><span>R$</span>1.856<span>,68</span></h2>
-                        <img class="cardPanel__wrapper__mainInfo__showValue" src="dist/img/icons/gray/eye.png" alt="eye icon">
-                        <p class="cardPanel__wrapper__mainInfo__description">Você já ganhou <span class="cardPanel__wrapper__mainInfo__description--grey">R$ 1,37</span> neste mês.</p>
+                        <h2 class="cardPanel__wrapper__mainInfo__title cardPanel__wrapper__mainInfo__title--black nuaccount-title"><span>R$</span>1.856<span>,68</span></h2>
+                        
+                        <p class="cardPanel__wrapper__mainInfo__description nuaccount-description">Você já ganhou <span class="cardPanel__wrapper__mainInfo__description--grey">R$ 1,37</span> neste mês.</p>
                     </div>
                     <div class="cardPanel__wrapper__footer">
                         <img class="cardPanel__wrapper__footer__icon" src="dist/img/icons/gray/deposit.png" alt="Icon">
                         <p>Transferência de R$ 414,10 recebida de Marina de Souza hoje</p>
                         <img class="cardPanel__wrapper__footer__arrow" src="dist/img/icons/arrow-down.png" alt="Arrow">
                     </div>
+                    <img class="cardPanel__wrapper__mainInfo__showValue" src="dist/img/icons/gray/eye.png" alt="eye icon">
                 </div>
+
             </section>
 
             <footer class="footer">
                 <div class="footer__wrapper">
-                    <?php 
-                        $footer_links = array(
-                            0=> array('title'=>'Indicar amigos', 'icon'=>'invite-home'),
-                            1=> array('title'=>'Depositar', 'icon'=>'deposit'),
-                            2=> array('title'=>'Transferir', 'icon'=>'transfer'),
-                            3=> array('title'=>'Pagar', 'icon'=>'bar-code'),
-                            4=> array('title'=>'Bloquear cartão', 'icon'=>'lock'),
-                            5=> array('title'=>'Cartão Virtual', 'icon'=>'virtual-card'),
-                            5=> array('title'=>'Organizar atalhos', 'icon'=>'filter'),
-                        );
-                    ?>
-                    <?php foreach($footer_links as $link) { ?>
-                        <div class="footer__wrapper__card <?= $link['title'] == 'Organizar atalhos' ? 'shortcuts' : '' ?>">
-                            <figure class="footer__wrapper__card__imgWrapper">
-                                <img class="footer__wrapper__card__imgWrapper__img " src="dist/img/icons/white/<?=$link['icon']?>.png" alt="<?=$link['title']?>">
-                            </figure>
-                            <span><?=$link['title']?></span>
-                        </div>
-                    <?php } ?>
+
                 </div>
             </footer>
         </div>
