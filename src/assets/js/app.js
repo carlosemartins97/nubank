@@ -163,9 +163,11 @@ function renderShortcutList(titulo, icone) {
 
 }
 
+var index = 0;
 function renderFooterShortcutList(titulo, icone, isTimeToOrganize) {
     var card = document.createElement("div");
     card.setAttribute("class", `footer__wrapper__card slick-slide ${titulo === 'Organizar atalhos' ? 'shortcuts' : ''}`)
+    card.setAttribute("data-slick-index", index);
     
     var figure = document.createElement("figure");
     figure.setAttribute("class", "footer__wrapper__card__imgWrapper");
@@ -185,10 +187,12 @@ function renderFooterShortcutList(titulo, icone, isTimeToOrganize) {
     if(isTimeToOrganize) {
         const wrapper = document.querySelector('.footer__wrapper').querySelector('.slick-track');
         wrapper.appendChild(card);
+        
     } else {
         const wrapper = document.querySelector('.footer__wrapper');
         wrapper.appendChild(card);
     }
+    index++;
     
 }
 
@@ -199,6 +203,7 @@ shortcutBackButton.addEventListener('click', function() {
     handleCloseShortcuts();
     
 })
+
 
 function handleCloseShortcuts() {
     content.classList.remove('content--hidden');
@@ -214,18 +219,21 @@ function handleCloseShortcuts() {
         atalhosOrganizados.push(objeto)
     })
     const antigosAtalhos = document.querySelectorAll('.footer__wrapper__card');
+    
     antigosAtalhos.forEach(item => {
         item.remove();
     })
+
     atalhosOrganizados.forEach(atalho => {
         renderFooterShortcutList(atalho.title, atalho.icon, true);
     })
+
     const shortcutButton = document.querySelector('.shortcuts');
     shortcutButton.addEventListener('click', function() {
         handleOpenShortcuts();
     })
-}
 
+}
 
 const shortcutButton = document.querySelector('.shortcuts');
 shortcutButton.addEventListener('click', function() {
@@ -238,6 +246,8 @@ function handleOpenShortcuts() {
     content.classList.remove('content--active');
     content.classList.add('content--hidden');
 }
+
+
 
 
 
@@ -294,6 +304,76 @@ creditSearchInput.onkeyup = function() {
     }
 }
 
+const allCreditCompras = document.querySelectorAll('.nucredito__list__item');
+const creditComprasBack = document.querySelector('.compra__header');
+const creditCompras = document.querySelector('.compra')
+creditComprasBack.addEventListener('click', function() {
+    creditCompras.classList.add('compra--disabled');
+})
+
+const compraTitle = document.querySelector('.compra__title');
+const compraWrapper = document.querySelector('.compra__wrapper');
+const inputTag = document.querySelector('.tag');
+const btnTag = document.querySelector('.tagSubmit');
+
+allCreditCompras.forEach(compra => {
+    compra.addEventListener('click', function() {
+        creditCompras.classList.remove('compra--disabled');
+        compraWrapper.innerHTML = compra.innerHTML;
+        const value = document.createElement("h1");
+        value.innerText = "R$ 199,99";
+        compraWrapper.appendChild(value);
+
+        const ul = document.createElement("ul");
+        ul.setAttribute("class", "compra__list");
+        compraWrapper.appendChild(ul);
+        var tagList = document.querySelector('.compra__list');
+
+        var titulo = compra.querySelector('.nucredito__list__item__info__title').innerText;
+        console.log(titulo);
+        const tagSaved = localStorage.getItem(`${titulo}`);
+        if(tagSaved) {
+            JSON.parse(tagSaved);
+            var tags = [];
+            tagSaved.split(",").forEach(tag => {
+                let newTag = tag.replace(/[^\w\s]/gi, '');
+                tags.push(newTag);
+                let li = document.createElement("li");
+                li.innerText = newTag;
+                li.setAttribute("class", "compra__list__item");
+                tagList.appendChild(li);
+            })
+        } else {
+            var tags = [];
+        }
+
+
+        btnTag.addEventListener('click', function() {
+            var tag = inputTag.value;
+            var li = document.createElement('li');
+            li.innerText = tag;
+            li.setAttribute("class", "compra__list__item");
+            tagList.appendChild(li);
+            
+            const allTagItems = document.querySelectorAll('.compra__list__item');
+            
+            allTagItems.forEach(tag => {
+                tags.push(tag.innerText);
+            })
+            localStorage.setItem(`${titulo}`, JSON.stringify(tags));
+            inputTag.value = '';
+        })
+
+        const deleteTag = document.querySelectorAll(".compra__list__item");
+        deleteTag.forEach((tag, index) => {
+            tag.addEventListener('click', function() {
+                tag.remove();
+                tags.splice(index, 1);
+                localStorage.setItem(`${titulo}`, JSON.stringify(tags));
+            })
+        })
+    })
+})
 
 
 
@@ -318,15 +398,6 @@ function setOnDrop(event) {
     const draggableElement = document.getElementById(id);
     dropzone.insertBefore(draggableElement, refItem);
     draggableElement.style.backgroundColor = '#eee';
-
-    // const newShortcutObject = new Object();
-    // newShortcutObject.title = draggableElement.innerText;
-    // newShortcutObject.icon = id;
-
-    // const refObject = new Object();
-    // refObject.title = event.target.innerText;
-    // refObject.icon = event.target.id
-    
 }
 
 

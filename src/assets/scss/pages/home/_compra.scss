@@ -1,0 +1,109 @@
+@import '../../utils/mixins';
+@import '../../utils/variaveis';
+
+main.mobile {
+  .compra {
+    @include nuSection;
+    z-index: 99;
+
+    color: black;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      img {
+          max-width: 25px;
+          object-fit: contain;
+      }
+      &__arrow {
+          transform: rotate(90deg);
+          margin-right: 10px;
+      }
+    }
+
+
+    &__wrapper {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .nucredito__list__item__date {
+        margin-left: unset !important;
+        order: 2;
+      }
+      .nucredito__list__item__info__description {
+        display: none;
+      }
+      .nucredito__list__item__info__title {
+        margin: 15px 0;
+      }
+
+      figure {
+        margin-bottom: 20px;
+        margin-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+
+      h1 {
+        order: 1;
+      }
+    }
+
+    &__tag {
+      margin-top: 30px;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+          height: 30px;
+          max-width: 300px;
+          width: 100%;
+          margin: 10px 0;
+        }
+        button {
+          background: $mainColor;
+          outline: none;
+          border: none;
+          height: 30px;
+          max-width: 300px;
+          width: 100%;
+          color: white;
+          transition: 0.3s;
+          &:hover {
+            filter: brightness(1.2);
+          }
+          
+        }
+      }
+    }
+
+    &__list {
+      margin-top: 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      order: 3;
+      flex-wrap: wrap;
+      &__item {
+        margin-top: 10px;
+        margin-left: 5px;
+        background: $mainColor;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          filter: brightness(1.2);
+        }
+      }
+    }
+  }
+}

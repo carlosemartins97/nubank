@@ -162,6 +162,7 @@
             @include_once('src/assets/views/includes/rewards.php'); 
             @include_once('src/assets/views/includes/nuConta.php');
             @include_once('src/assets/views/includes/nuCredito.php');
+            @include_once('src/assets/views/includes/nuCredito_compra.php');
         ?>
     </main>
 
